@@ -1,0 +1,111 @@
+2015/11/10 18:27:41 [asm_amd64.s:2232] [I] http server Running on :8080
+检查账号
+2015/11/10 18:27:44 [router.go:854] [D] | GET        | /                                        | 1.6621662s       | match      | /                                        | 
+检查账号
+2015/11/10 18:27:54 [router.go:854] [D] | GET        | /add                                     | 8.0008ms         | match      | /add                                     | 
+affect 1
+2015/11/10 18:27:56 [router.go:854] [D] | POST       | /add                                     | 642.0642ms       | match      | /add                                     | 
+检查账号
+2015/11/10 18:27:56 [router.go:854] [D] | GET        | /                                        | 33.0033ms        | match      | /                                        | 
+id 26
+检查账号
+models.GetBlog(id) =: {26     }
+2015/11/10 18:27:57 [router.go:854] [D] | GET        | /view/26                                 | 185.0185ms       | match      | /view/:id([0-9]+)                        | 
+检查账号
+affect 1
+2015/11/10 18:28:00 [router.go:854] [D] | GET        | /delete/26                               | 137.0137ms       | match      | /delete/:id([0-9]+)                      | 
+检查账号
+2015/11/10 18:28:00 [router.go:854] [D] | GET        | /                                        | 56.0056ms        | match      | /                                        | 
+检查账号
+2015/11/10 18:28:01 [router.go:854] [D] | GET        | /add                                     | 10.001ms         | match      | /add                                     | 
+affect 1
+2015/11/10 18:28:30 [router.go:854] [D] | POST       | /add                                     | 86.0086ms        | match      | /add                                     | 
+检查账号
+2015/11/10 18:28:30 [router.go:854] [D] | GET        | /                                        | 35.0035ms        | match      | /                                        | 
+进入login
+2015/11/10 18:28:33 [router.go:854] [D] | GET        | /login                                   | 0                | match      | /login                                   | 
+进入login
+2015/11/10 18:28:34 [router.go:854] [D] | GET        | /login                                   | 6.0006ms         | match      | /login                                   | 
+进入login
+2015/11/10 18:30:16 [router.go:854] [D] | GET        | /login                                   | 7.0007ms         | match      | /login                                   | 
+2015/11/10 18:31:32 [router.go:854] [D] | POST       | /login                                   | 0                | match      | /login                                   | 
+进入login
+2015/11/10 18:31:32 [router.go:854] [D] | GET        | /login                                   | 7.0007ms         | match      | /login                                   | 
+2015/11/10 18:31:39 [router.go:854] [D] | POST       | /login                                   | 0                | match      | /login                                   | 
+进入login
+2015/11/10 18:31:40 [router.go:854] [D] | GET        | /login                                   | 5.0005ms         | match      | /login                                   | 
+2015/11/10 18:31:47 [router.go:854] [D] | POST       | /login                                   | 0                | match      | /login                                   | 
+进入login
+2015/11/10 18:31:47 [router.go:854] [D] | GET        | /login                                   | 6.0006ms         | match      | /login                                   | 
+2015/11/10 18:31:55 http: multiple response.WriteHeader calls
+2015/11/10 18:31:55 [router.go:854] [D] | POST       | /login                                   | 0                | match      | /login                                   | 
+检查账号
+2015/11/10 18:31:55 [router.go:854] [D] | GET        | /                                        | 37.0037ms        | match      | /                                        | 
+检查账号
+2015/11/10 18:31:59 [router.go:854] [D] | GET        | /                                        | 26.0026ms        | match      | /                                        | 
+id 1
+检查账号
+models.GetBlog(id) =: {1 姓名 性别 地址 标题 内容
+}
+2015/11/10 18:32:01 [router.go:854] [D] | GET        | /view/1                                  | 6.0006ms         | match      | /view/:id([0-9]+)                        | 
+检查账号
+2015/11/10 18:32:02 [router.go:854] [D] | GET        | /                                        | 126.0126ms       | match      | /                                        | 
+id 3
+检查账号
+models.GetBlog(id) =: {3 杨元庆 男 联想 文章三 文字三}
+2015/11/10 18:32:03 [router.go:854] [D] | GET        | /view/3                                  | 49.0049ms        | match      | /view/:id([0-9]+)                        | 
+检查账号
+2015/11/10 18:32:03 [router.go:854] [D] | GET        | /                                        | 10.001ms         | match      | /                                        | 
+id 5
+检查账号
+models.GetBlog(id) =: {5 马化腾 男 腾讯 腾讯的未来     深圳市腾讯计算机系统有限公司成立于1998年11月，由马化腾、张志东、许晨晔、陈一丹、曾李青五位创始人共同创立。是中国最大的互联网综合服务提供商之一，也是中国服务用户最多的互联网企业之一。 
+    腾讯多元化的服务包括：社交和通信服务QQ及微信/WeChat、社交网络平台QQ空间、腾讯游戏旗下QQ游戏平台、门户网站腾讯网、腾讯新闻客户端和网络视频服务腾讯视频等。
+    2004年6月16日，腾讯公司在香港联交所主板公开上市（股票代号00700），董事会主席兼首席执行官是马化腾。
+    2014年全年，腾讯总营收789.32亿元，净利润238.1亿元。
+    2015年第二季度，腾讯总营收458.28亿元，净利润194.08亿元。
+    2015年6月，中国腾讯云计算数据中心在深汕特别合作区正式启用。 }
+2015/11/10 18:32:05 [router.go:854] [D] | GET        | /view/5                                  | 15.0015ms        | match      | /view/:id([0-9]+)                        | 
+检查账号
+2015/11/10 18:32:06 [router.go:854] [D] | GET        | /                                        | 19.0019ms        | match      | /                                        | 
+id 6
+检查账号
+models.GetBlog(id) =: {6 重复 重复 重复 冲粗 重复，实验log
+}
+2015/11/10 18:32:08 [router.go:854] [D] | GET        | /view/6                                  | 41.0041ms        | match      | /view/:id([0-9]+)                        | 
+检查账号
+2015/11/10 18:32:09 [router.go:854] [D] | GET        | /                                        | 30.003ms         | match      | /                                        | 
+id 7
+检查账号
+models.GetBlog(id) =: {7 琪琪 女 琪琪 琪琪 七七七IQIQ一IQIQIQ一IQIQIQ一一气气气气}
+2015/11/10 18:32:10 [router.go:854] [D] | GET        | /view/7                                  | 30.003ms         | match      | /view/:id([0-9]+)                        | 
+检查账号
+2015/11/10 18:32:11 [router.go:854] [D] | GET        | /                                        | 8.0008ms         | match      | /                                        | 
+检查账号
+2015/11/10 18:32:21 [router.go:854] [D] | GET        | /                                        | 7.0007ms         | match      | /                                        | 
+进入login
+2015/11/10 18:33:26 [router.go:854] [D] | GET        | /login                                   | 0                | match      | /login                                   | 
+进入login
+2015/11/10 18:33:26 [router.go:854] [D] | GET        | /login                                   | 5.0005ms         | match      | /login                                   | 
+检查账号
+2015/11/10 18:33:32 [router.go:854] [D] | GET        | /                                        | 76.0076ms        | match      | /                                        | 
+进入login
+2015/11/10 18:33:32 [router.go:854] [D] | GET        | /login                                   | 5.0005ms         | match      | /login                                   | 
+检查账号
+2015/11/10 18:33:37 [router.go:854] [D] | GET        | /                                        | 8.0008ms         | match      | /                                        | 
+进入login
+2015/11/10 18:33:37 [router.go:854] [D] | GET        | /login                                   | 6.0006ms         | match      | /login                                   | 
+检查账号
+2015/11/10 18:33:44 [router.go:854] [D] | GET        | /                                        | 43.0043ms        | match      | /                                        | 
+进入login
+2015/11/10 18:33:44 [router.go:854] [D] | GET        | /login                                   | 4.0004ms         | match      | /login                                   | 
+id 4
+检查账号
+models.GetBlog(id) =: {4 刘强东 男 京东 文章四 文字四}
+2015/11/10 18:34:04 [router.go:854] [D] | GET        | /view/4                                  | 67.0067ms        | match      | /view/:id([0-9]+)                        | 
+进入login
+2015/11/10 18:34:04 [router.go:854] [D] | GET        | /login                                   | 3.0003ms         | match      | /login                                   | 
+检查账号
+2015/11/10 18:34:17 [router.go:854] [D] | GET        | /                                        | 7.0007ms         | match      | /                                        | 
+进入login
+2015/11/10 18:34:17 [router.go:854] [D] | GET        | /login                                   | 5.0005ms         | match      | /login                                   | 
+^C
