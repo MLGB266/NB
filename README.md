@@ -1,22 +1,8 @@
-# NB
-搞事情
-创建价格监控表 语句：
-```hive
- create table price_log_monitor 
-(	
-	id string,
-	skuno string,
-	areacode string,
-	type string,
-	node string,
-	time bigint,
-	isbatch bigint,
-	status bigint,
-	action bigint,
-	result bigint
-) 
-PARTITIONED BY(dt string)
-ROW FORMAT DELIMITED ‘\n’
-FIELDS TERMINATED BY '\t'
-STORED AS ORC;
+# blog-web-wangtengfei
+
+---
+### 快速使用说明
+```go
+1. 下载整个文件.zip到本地,并解压
+2. 进入myblog文件夹下，运行main.exe
 ```
