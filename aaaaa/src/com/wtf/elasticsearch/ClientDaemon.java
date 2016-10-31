@@ -5,6 +5,7 @@ import java.net.UnknownHostException;
 
 import org.elasticsearch.action.admin.cluster.health.ClusterHealthResponse;
 import org.elasticsearch.action.admin.indices.create.CreateIndexResponse;
+import org.elasticsearch.action.admin.indices.delete.DeleteIndexResponse;
 import org.elasticsearch.action.admin.indices.settings.get.GetSettingsResponse;
 import org.elasticsearch.client.Client;
 import org.elasticsearch.client.ClusterAdminClient;
@@ -48,7 +49,6 @@ public class ClientDaemon {
 	public static void main(String[] args) {
 		Client client = createClient("10.58.65.23");
 		clusterAPI(client);
-		indicesAPI(client);
 	}
 	public static void transportClientAPI() throws UnknownHostException{
 		// on startup
@@ -82,23 +82,31 @@ public class ClientDaemon {
 		int numberOfDataNode = clusterHealthResponse.getNumberOfDataNodes();
 		int numberOfNodes = clusterHealthResponse.getNumberOfNodes();
 		System.out.println("=====clusterName====="+clusterName+"=====datanode number====="+numberOfDataNode+"=====numberOfNodes====="+numberOfNodes);
+		long count = 0;
 		for (ClusterIndexHealth health : clusterHealthResponse.getIndices().values()) {
 			String index = health.getIndex();
-			if("cashier-api-2016-10-25".equals(index)){
-				int numberOfReplicas = health.getNumberOfReplicas();
-				int numberOfShards = health.getNumberOfShards();
-				ClusterHealthStatus clusterHealthStatus = health.getStatus();
-				String status = clusterHealthStatus.name();
-				System.out.println("=====indexName====="+index+"======numberOfShards====="+numberOfShards+"=====numberOfReplicas====="+numberOfReplicas+"=====clusterHealthStatus====="+status);
+//			if("cashier-api-2016-10-25".equals(index)){
+//				int numberOfReplicas = health.getNumberOfReplicas();
+//				int numberOfShards = health.getNumberOfShards();
+//				ClusterHealthStatus clusterHealthStatus = health.getStatus();
+//				String status = clusterHealthStatus.name();
+//				System.out.println("=====indexName====="+index+"======numberOfShards====="+numberOfShards+"=====numberOfReplicas====="+numberOfReplicas+"=====clusterHealthStatus====="+status);
+//			}
+			if(index.contains("2016-10-2")){
+				count++;
+				System.out.println("===indexName: "+index+"==count: "+count);
+//				DeleteIndexResponse deleteIndexResponse = client.admin().indices().prepareDelete(index).get();
+//				System.out.println("====delete index===="+deleteIndexResponse.isAcknowledged());
 			}
 		}
+		System.out.println("==count: "+count);
 //		Wait for status
-		ClusterHealthResponse healthResponse = client.admin().cluster().prepareHealth().setWaitForYellowStatus().get();
-		System.out.println(healthResponse.getStatus().name());
-		ClusterHealthResponse healthResponse1 = client.admin().cluster().prepareHealth("cashier-api-2016-10-25").setWaitForGreenStatus().get();
-		System.out.println(healthResponse1.getStatus().name());
-		ClusterHealthResponse healthResponse2 = client.admin().cluster().prepareHealth("cashier-api-2016-10-25").setWaitForGreenStatus().setTimeout(TimeValue.timeValueSeconds(2)).get();
-		System.out.println(healthResponse2.getStatus().name());
+//		ClusterHealthResponse healthResponse = client.admin().cluster().prepareHealth().setWaitForYellowStatus().get();
+//		System.out.println(healthResponse.getStatus().name());
+//		ClusterHealthResponse healthResponse1 = client.admin().cluster().prepareHealth("cashier-api-2016-10-25").setWaitForGreenStatus().get();
+//		System.out.println(healthResponse1.getStatus().name());
+//		ClusterHealthResponse healthResponse2 = client.admin().cluster().prepareHealth("cashier-api-2016-10-25").setWaitForGreenStatus().setTimeout(TimeValue.timeValueSeconds(2)).get();
+//		System.out.println(healthResponse2.getStatus().name());
 	}
 	
 	public static void indicesAPI(Client client){
